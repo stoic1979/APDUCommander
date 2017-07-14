@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.0"
+
+    defaultConfig {
+        applicationId "com.wb.apducommander"
+        minSdkVersion 18
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+dependencies {
+    provided files('libs/org.simalliance.openmobileapi.jar')
+}
